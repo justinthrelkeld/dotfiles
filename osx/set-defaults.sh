@@ -9,6 +9,8 @@
 
 # Disable press-and-hold for keys in favor of key repeat.
 
+echo "setting OSX defaults, just how you like them"
+
 defaults write -g ApplePressAndHoldEnabled -bool true
 
 # Use AirDrop over every interface. srsly this should be a default.
@@ -61,5 +63,7 @@ defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool 
 defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
+echo "killing Dock so it loads in your new settings"
+killall Dock
 
 echo "your mac is now sane :)"
