@@ -57,6 +57,10 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Don't rearrange Spaces based on Most Recently Used (mru)
 defaults write com.apple.dock mru-spaces -bool false
 
+# Hide the dashboard because who even uses it?
+# defaults write com.apple.dashboard mcx-disabled -boolean YES
+defaults write com.apple.dock dashboard-in-overlay -bool true
+
 # Hide Safari's bookmark bar.
 defaults write com.apple.Safari ShowFavoritesBar -bool false
 
@@ -66,6 +70,21 @@ defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+# Finder: show hidden files by default
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# Set the icon size of Dock items to 50 pixels
+defaults write com.apple.dock tilesize -int 50; killall Dock
+
+# Show indicator lights for open applications in the Dock
+defaults write com.apple.dock show-process-indicators -bool true
+
+# Disable automatic emoji substitution (i.e. use plain text smileys)
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
 
 echo "killing Dock so it loads in your new settings"
 killall Dock
