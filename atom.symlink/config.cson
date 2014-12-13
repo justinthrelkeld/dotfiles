@@ -1,35 +1,45 @@
-'editor':
-  'showIndentGuide': true
-  'fontFamily': 'Menlo'
-  'fontSize': 15
-'core':
-  'excludeVcsIgnoredPaths': true
-  'ignoredNames': [
-    '.bundle'
-    '.git'
-    'log'
-    'repositories'
-    'tmp'
-    'vendor'
-  ]
-  'themes': [
-    'unity-ui'
-    'glacier-syntax'
-  ]
-  'hideGitIgnoredFiles': true
-  'disabledPackages': [
-    'background-tips'
-    'exception-reporting'
-    'metrics'
-  ]
-'spell-check':
-  'grammars': [
-    'text.plain'
-    'source.gfm'
-    'text.git-commit'
-  ]
-'welcome':
-  'showOnStartup': false
-'release-notes':
-  'viewedVersion': '0.89.0'
-'tree-view': {}
+'global':
+  'editor':
+    'showIndentGuide': true
+    'fontFamily': 'Source Code Pro'
+    'showInvisibles': true
+    'fontSize': 13
+    'invisibles': {}
+  'core':
+    'ignoredNames': [
+      '.bundle'
+      '.git'
+      'log'
+      'repositories'
+      'tmp'
+      'vendor'
+    ]
+    'hideGitIgnoredFiles': true
+    'disabledPackages': [
+      'background-tips'
+      'exception-reporting'
+      'metrics'
+    ]
+    'themes': [
+      'quantum-ui'
+      'muukii'
+    ]
+  'spell-check':
+    'grammars': [
+      'text.plain'
+      'source.gfm'
+      'text.git-commit'
+    ]
+  'welcome':
+    'showOnStartup': false
+  'release-notes':
+    'viewedVersion': '0.89.0'
+  'wakatime':
+    'apikey': ''
+    'ignore': [
+      '^/var/'
+      '^/tmp/'
+      '^/private/'
+    ]
+'.ini.source':
+  'editor': {}
